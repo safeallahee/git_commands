@@ -58,6 +58,36 @@ git commit -m "Initial commit"
 git log
 ```
 
+## Writing commit messages
+- Short single-line summary (less than 50 characters)
+- Optionaly followed by a blank line and a more complete description
+- Keep each line to less than 72 characters
+- Write commit messges in present tense, not past tense
+  > "fix bug" or "fixes bug" not "fixed bug"
+- Bullet points are usually astrisks or hyphens
+- Can add "ticket tracking numbers" from bugs or support request
+- Can develope shorthand for your orgnization
+  > "[css, js]"
+
+  > "bugfix: "
+
+  > "#38405 - "
+
+- Be clear and descriptive
+  > Bad: "Fix typo" | Good: "Add missing > in project section of HTML"
+
+  > Bad: "Update login code" | Good: "Change user authentication to use Blowfish"
+
+  > Bad: "Update member report, we should discuss if this is right next week" |
+
+### Exmaple of good commit:
+> t23094 - Fixes bug in admin logout
+
+> When an admin logged out of the admin area, they could not log in to the members
+> because their sesson[:user_id] was still set to the admin ID. This patch fixes the bug by
+> setting session[:user_id] to nil when any user logs out of any area.
+
+
 # Clone Repository
 ## Track an existing remote repository with Git
 ```bash
@@ -116,16 +146,3 @@ git branch -d calc-divide
 git branch -a
 git push origin --delete calc-divide
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
