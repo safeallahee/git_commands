@@ -39,11 +39,20 @@ git status
 # git area | where are we now?
 working directory | staging area | .git directory (Repository)
 
+## Discard changes in working directory
+```bash
+git restore <file name>
+```
+    
 ## Add files to staging area
 ```bash
 git add .gitignore
 git add -A
 git status
+```
+## Remove some files from staging area
+```bash
+git rm --cached <file name>
 ```
 
 ## Remove files from staging area
@@ -55,6 +64,11 @@ git reset
 ## Commit
 ```bash
 git commit -m "Initial commit"
+git log
+```
+
+## Commit history
+```bash
 git log
 ```
 
